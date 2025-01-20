@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MessageCircle, Send, X } from "lucide-react";
 import {
   collection,
@@ -32,6 +32,8 @@ export function CustomerChat() {
   const [chatStarted, setChatStarted] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
 
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (chatStarted && email) {
       const q = query(
@@ -48,6 +50,9 @@ export function CustomerChat() {
           });
         });
         setMessages(newMessages);
+        if (messagesEndRef.current) {
+          messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        }
       });
 
       return () => unsubscribe();
@@ -126,8 +131,9 @@ export function CustomerChat() {
         <>
           <ScrollArea className="flex-1 p-4">
             <div className="space-y-4">
-              {messages.map((msg) => (
+              {messages.map((msg, index) => (
                 <div
+                  ref={index === messages.length - 1 ? messagesEndRef : null}
                   key={msg.id}
                   className={`flex ${
                     msg.sender === "user" ? "justify-end" : "justify-start"
