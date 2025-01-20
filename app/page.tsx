@@ -30,14 +30,22 @@ export default function Home() {
             <a href="#" className="text-sm text-gray-400 hover:text-white">
               Home
             </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">
-              Help Center
-            </a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">
-              Contact
+            <a
+              href="/customerchat"
+              target="_blank"
+              className="text-sm text-gray-400 hover:text-white"
+            >
+              Admin Page
             </a>
             <a href="#" className="text-sm text-gray-400 hover:text-white">
               FAQs
+            </a>
+            <a
+              href="/customerchat"
+              target="_blank"
+              className="text-sm text-gray-400 hover:text-white"
+            >
+              Admin Page
             </a>
           </div>
           <Button variant="ghost" className="text-gray-400 hover:text-white">
