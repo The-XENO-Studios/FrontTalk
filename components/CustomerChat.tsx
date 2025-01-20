@@ -92,7 +92,7 @@ export function CustomerChat() {
   if (!isOpen) {
     return (
       <Button
-        className="fixed bottom-4 right-4 rounded-full w-16 h-16 p-4 bg-white hover:bg-gray-400 transition-all duration-300"
+        className="fixed bottom-4 right-4 rounded-full w-16 h-16 p-4 bg-white hover:bg-gray-400 transition-all duration-300 z-50"
         onClick={() => setIsOpen(true)}
       >
         <MessageCircle className="h-6 w-6 text-black" />
