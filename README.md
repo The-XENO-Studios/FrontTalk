@@ -1,6 +1,15 @@
 # FrontTalk
 
-FrontTalk is an open-source project built with Next.js and Firebase to handle real-time messaging. This project leverages the power of Next.js for server-side rendering and Firebase for real-time database capabilities.
+FrontTalk is an open-source project built with Next.js and Firebase to handle real-time messaging for customer service. This project leverages the power of Next.js for server-side rendering and Firebase for real-time database capabilities. Using third party customer chat service can be expensive. But it can be free of cost if you know how to do it. Self host your own customer service chat system.
+
+## What's included
+
+- The client side chat bubble component for customers
+- A demo admin dashboard for checking the messages
+
+## What you have to implement
+
+This project doesn't have any Authentication system set up. Because that's up to you. Authentication may vary from project to project. But as this project doesn't have any auth system means that you can use any auth system as you like.
 
 ## Features
 
